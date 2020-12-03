@@ -32,7 +32,12 @@
       <!-- main selection movie -->
       <main>
 
-        <div  v-for="movie in arrayMovie">
+        <div v-for="movie in arrayMovie">
+
+          <div>{{movie.title}}</div>
+          <div>{{movie.original_title}} </div>
+          <img :src="movie.original_language" alt="">
+          <div>{{movie.vote_average}}</div>
 
         </div>
 
