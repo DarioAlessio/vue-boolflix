@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Netflix clone</title>
+  </head>
+  <body>
+
+    <!-- container app -->
+    <div id="app">
+
+      <!-- header logo and research movie -->
+      <header>
+        <div class="logo-app">
+
+          <img src="" alt="">
+
+        </div>
+
+        <div class="research-text-movie">
+            <input type="text" name="text" v-model="inputSearch" placeholder="">
+            <button type="button" name="button">cerca</button>
+        </div>
+
+
+      </header>
+
+      <!-- main selection movie -->
+      <main>
+
+        <div  v-for="movie in arrayMovie">
+
+        </div>
+
+      </main>
+
+
+
+
+
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

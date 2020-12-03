@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app{
+  height: 100vh;
+}
+
+
+header {
+  width: 100%;
+  height: 15%;
+  background-color: #141414;
+  display: flex;
+  align-items: center;
+}
+
+.research-text-movie {
+  width: 15%;
+}
+
+main{
+  background-color: white;
+  /* background-color: #0d0d0d; */
+  height: calc(100% - 15%);
+  width: 100%;
+}
