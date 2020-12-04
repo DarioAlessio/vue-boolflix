@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <link rel="stylesheet" href="css/style.css">
     <title>Netflix clone</title>
   </head>
   <body>
@@ -23,7 +23,7 @@
 
         <div class="research-text-movie">
             <input type="text" name="text" v-model="inputSearch" placeholder="">
-            <button type="button" name="button">cerca</button>
+            <button type="button" name="button" @click="search()">SEARCH</button>
         </div>
 
 
@@ -36,7 +36,7 @@
 
           <div>{{movie.title}}</div>
           <div>{{movie.original_title}} </div>
-          <img :src="movie.original_language" alt="">
+          <div>{{movie.original_language}}</div>
           <div>{{movie.vote_average}}</div>
 
         </div>
