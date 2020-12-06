@@ -27,3 +27,17 @@ main{
   height: calc(100% - 15%);
   width: 100%;
 }
+
+.flag-language > img{
+  width: 60px;
+  height: 40px;
+
+}
+
+.stars{
+	color:#000;
+}
+
+.yellow{
+  color:gold;
+}
