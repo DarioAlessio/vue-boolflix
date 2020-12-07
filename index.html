@@ -14,63 +14,49 @@
     <!-- container app -->
     <div id="app">
 
-      <!-- header logo and research movie -->
+      <!-- header logo and research  -->
       <header>
-        <div class="logo-app">
 
-          <img src="" alt="">
+        <img :src="logoImage" alt="">
 
-        </div>
-
-        <div class="research-text-movie">
-            <input type="text" name="text" v-model="inputSearch"  @keypress.enter="search" placeholder="Search...">
-        </div>
-
+        <input type="text" name="text" v-model="inputSearch"  @keypress.enter="search" placeholder="Search...">
 
       </header>
 
       <!-- main selection movie and tv -->
       <main>
 
-        <div v-for="item in arrayMovieTv">
+        <div v-for="item in arrayMovieTv" class="card-movie">
           <!-- copertina -->
-          <img :src="'https://image.tmdb.org/t/p/w185/' + item.poster_path">
+          <img :src="'https://image.tmdb.org/t/p/w342/' + item.poster_path">
 
-          <!-- movie -->
-          <div class="item.type === movie">
+          <div class="overlay">
 
-            <!-- titolo -->
-            <div>{{item.title}}</div>
+              <!-- titolo -->
+              <div class="title"> Titolo: {{item.title || item.name}}</div>
 
-            <!-- original titolo -->
-            <div>{{item.original_title}} </div>
+              <!-- original titolo -->
+              <div class="title"> Titolo Originale: {{item.original_title || item.original_name}} </div>
 
-          </div>
+              <!-- bandiera della lingua  -->
+              <!-- <div class="flag-language">
+                  <img :src="'img/' + item.original_language + '.svg'">
+              </div> -->
 
-          <!-- tv -->
-          <div class="item.type === tv">
+              <!-- stelle per la valutazione -->
+              <div class="stars">
+                <span>Voto:</span>
+                <i :class="{yellow: item.vote_average > 1}" class="fas fa-star"></i>
+                <i :class="{yellow: item.vote_average > 2}" class="fas fa-star"></i>
+                <i :class="{yellow: item.vote_average > 4}" class="fas fa-star"></i>
+                <i :class="{yellow: item.vote_average > 6}" class="fas fa-star"></i>
+                <i :class="{yellow: item.vote_average > 8}" class="fas fa-star"></i>
 
-            <!-- titolo -->
-            <div>{{item.name}}</div>
+              </div>
 
-            <!-- original titolo -->
-            <div>{{item.name}} </div>
-
-          </div>
-
-          <!-- bandiera della lingua  -->
-          <div class="flag-language">
-              <img :src="'img/' + item.original_language + '.svg'">
-          </div>
-
-          <!-- stelle per la valutazione -->
-          <div class="stars">
-
-            <i :class="{yellow: item.vote_average > 1}" class="fas fa-star"></i>
-            <i :class="{yellow: item.vote_average > 2}" class="fas fa-star"></i>
-            <i :class="{yellow: item.vote_average > 4}" class="fas fa-star"></i>
-            <i :class="{yellow: item.vote_average > 6}" class="fas fa-star"></i>
-            <i :class="{yellow: item.vote_average > 8}" class="fas fa-star"></i>
+              <div class="overview">
+                Overview: {{item.overview}}
+              </div>
 
           </div>
 
