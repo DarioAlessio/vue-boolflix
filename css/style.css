@@ -9,7 +9,6 @@
   color: white;
 }
 
-
 header {
   height: 14%;
   background-color: #000000;
@@ -46,7 +45,6 @@ main{
   border: 1px solid white;
   margin-top: 40px;
   position: relative;
-
 }
 
 .card-movie img {
@@ -88,7 +86,6 @@ main{
 .flag-language > img{
   width: 60px;
   height: 40px;
-
 }
 
 .stars{
