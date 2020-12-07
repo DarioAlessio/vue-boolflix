@@ -23,8 +23,7 @@
         </div>
 
         <div class="research-text-movie">
-            <input type="text" name="text" v-model="inputSearch" placeholder="">
-            <button type="button" name="button" @click="search()">SEARCH</button>
+            <input type="text" name="text" v-model="inputSearch"  @keypress.enter="search" placeholder="Search...">
         </div>
 
 
@@ -34,7 +33,10 @@
       <main>
 
         <div v-for="item in arrayMovieTv">
+          <!-- copertina -->
+          <img :src="'https://image.tmdb.org/t/p/w185/' + item.poster_path">
 
+          <!-- movie -->
           <div class="item.type === movie">
 
             <!-- titolo -->
@@ -43,8 +45,9 @@
             <!-- original titolo -->
             <div>{{item.original_title}} </div>
 
-
           </div>
+
+          <!-- tv -->
           <div class="item.type === tv">
 
             <!-- titolo -->
@@ -53,12 +56,13 @@
             <!-- original titolo -->
             <div>{{item.name}} </div>
 
-
           </div>
+
           <!-- bandiera della lingua  -->
           <div class="flag-language">
               <img :src="'img/' + item.original_language + '.svg'">
           </div>
+
           <!-- stelle per la valutazione -->
           <div class="stars">
 
@@ -73,10 +77,6 @@
         </div>
 
       </main>
-
-
-
-
 
     </div>
 
