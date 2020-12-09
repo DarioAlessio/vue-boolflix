@@ -27,7 +27,9 @@
       <main>
 
         <div v-for="item in arrayMovieTv" class="card-movie">
+
           <!-- copertina -->
+          <img :src="imageNull" v-if="item.poster_path === null">
           <img :src="'https://image.tmdb.org/t/p/w342/' + item.poster_path">
 
           <div class="overlay">

@@ -5,6 +5,7 @@ var app = new Vue({
   el:"#app",
   data:{
     logoImage:'https://assets.brand.microsites.netflix.io/assets/493f5bba-81a4-11e9-bf79-066b49664af6_cm_1440w.png?v=46',
+    imageNull:'https://www.svaghiamo.it/wp-content/uploads/2016/09/image-not-found-4a963b95bf081c3ea02923dceaeb3f8085e1a654fc54840aac61a57a60903fef.png',
     arrayMovieTv:[],
     inputSearch:''
   },
