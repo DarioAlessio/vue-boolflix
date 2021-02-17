@@ -40,15 +40,16 @@
               <!-- original titolo -->
               <div class="title"> Titolo Originale: {{item.original_title || item.original_name}} </div>
 
-              <!-- bandiera della lingua  -->
-              <!-- <div class="flag-language">
+              <!-- bandiera della lingua  --> -->
+              <div class="flag-language">
                   <img :src="'img/' + item.original_language + '.svg'">
-              </div> -->
+              </div>
 
               <!-- stelle per la valutazione -->
               <div class="stars">
                 <span>Voto:</span>
-                <i :class="{yellow: item.vote_average > 1}" class="fas fa-star"></i>
+
+                <i :class="{yellow: (item.vote_average / 2) * 5}" class="fas fa-star"></i>
                 <i :class="{yellow: item.vote_average > 2}" class="fas fa-star"></i>
                 <i :class="{yellow: item.vote_average > 4}" class="fas fa-star"></i>
                 <i :class="{yellow: item.vote_average > 6}" class="fas fa-star"></i>
